@@ -359,11 +359,14 @@
     align-items: center;
     border-radius: 85px;
 }
-@media only screen and (min-width: 1265px) {
+@media only screen and (max-width: 1865px) {
     .docs-side-profile{
-        height: 34.4rem;
-        top:-64px;
+        height: 50.4rem;
+        top:-84px;
         /* left: 25%; */
+    }
+    .img-canvas{
+        height: 45.1rem;
     }
 }
 
