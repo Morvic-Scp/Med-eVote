@@ -116,23 +116,23 @@
 .home-register-btn{
     background: var(--med-e-vote-bright-green, #54e445);
     border-radius: 59px;
-    padding: 15px 22px;
-    width: 200px;
-    height: 64px;
+    /* padding: 14px 18px; */
+    width: 180px;
+    height: 55px;
     outline: none;
     border: none;
     color: var(--med-e-vote-blue, #092eae);
     text-align: center;
-    font: 500 34px/20px "Inter", sans-serif;
+    font: 500 27px/18px "Inter", sans-serif;
     position: relative;
+    outline: 1px solid var(--med-e-vote-bright-green);
+    transition: all .3s ease-in;
+
 }
 .home-register-btn:hover{
     box-shadow: 2px 3px 5px #0000004d;
     outline: 4px solid var(--med-e-vote-bright-green);
     outline-offset: 5px;
-    position: relative;
-    top: -4px;
-    left: 3px;
     transition: all .3s ease-in;
 }
 
@@ -166,28 +166,28 @@
 
 .body-2 {
   background: var(--med-e-vote-light-blue, #e4eaff);
-  padding: 61px 51px 61px 51px;
-  gap: 33px;
+  padding: 51px 41px;
+  /* gap: 13px; */
 }
 .frame-158 {
   background: var(--med-e-vote-blue, #092eae);
   border-radius: 25px;
-  padding: 57px 43px 57px 43px;
-  width: 48%;
+  padding: 57px 43px;
+  margin: 0 6px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-decoration: none;
+}
+.frame-158 i{
+    font-size: 8vw;
+    color: var(--med-e-vote-bright-green);
 }
 
 .frame-158:hover{
-    outline: 4px solid var(--med-e-vote-blue);
-    outline-offset: 10px;
-    position: relative;
-    top: -5px;
-    left: 5px;
-    background-color: var(--med-e-vote-dark-blue, #002197);
-    transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    background: radial-gradient(var(--med-e-vote-blue, #092eae),var(--med-e-vote-dark-blue, #002197));
+    transition: all .03s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .summary-text {
@@ -206,13 +206,13 @@
 
 .body-3 {
   background: var(--med-e-vote-blue, #092eae);
-  padding: 40px 0px ;
+  padding: 61px 0px ;
 }
 
 
 .mask-group {
   width: fit-content;
-  height: 144px;
+  height: 120px;
   position: static;
 }
 
@@ -223,36 +223,25 @@
   position: relative;
   width: 655px;
 }
-.days-more::before {  
-    transform: scaleX(0);
-    transform-origin: bottom right;
-  }
-  
-  .days-more:hover::before {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
-  
-  .days-more::before {
-    content: " ";
-    display: block;
-    position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-    inset: 0 0 0 0;
-    border-radius: 45px;
-    background: var(--med-e-vote-bright-green);
-    z-index: -1;
-    transition: transform .3s ease;
-  }
 
 .days-more {
-  color: var(--adm-off-white-texts, #d6d6d6);
+  color: var(--adm-off-white-texts, #f3f3f3);
   text-align: center;
   font: 400 64px "Inter", sans-serif;
   position: relative;
   padding: 8px 17px;
-
+  transition:all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
   width: fit-content;
+  /* transition: all .3s ease-in; */
+  border-radius: 50px;
+
+}
+.days-more:hover{
+    /* box-shadow: 2px 3px 5px #0000004d; */
+    border-radius: 50px;
+    outline: 4px solid var(--med-e-vote-bright-green);
+    outline-offset: 5px;
+    transition:all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .footer-inner {
@@ -290,8 +279,11 @@
     align-items: center;
     text-decoration: none;
     margin: 4px 10px;
+    transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
     
 }
+
+
 
 .social-item:hover{
     background-color: white;
@@ -300,20 +292,32 @@
     transform: scale(1.1);
     /* position: relative; */
     /* top: -4px; */
-    transition: all .3s ease-in;
+    transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
 
 }
 
 .img-canvas{
-    height: 103vh;
+    height: 100vh;
 }
 .content-msg{
-    padding: 5rem;
+    padding: 4.3rem;
 }
 
-@media only screen and (max-width: 684px) {
+.mask-group i{
+    font-size: 95px;
+    background: var(--med-e-vote-bright-green);
+    color: var(--med-e-vote-blue);
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 85px;
+}
+
+@media only screen and (max-width: 1018px) {
     .nav {
-      width: 70%;
+      width: 40%;
     }
     .banner{
         padding: 10vh 5vh;
@@ -326,9 +330,9 @@
         padding: 5px 15px;
     }
     .docs-side-profile{
-        height: 78vh;
-        top:-72px;
-        left: 25%;
+        height: 87vh;
+        /* top:-72px;
+        left: 25%; */
     }
     .img-canvas{
         height: 61vh;
@@ -345,7 +349,7 @@
         font: 700 45px "Inter", sans-serif;
       }
       .home-register-btn{
-        padding: 8px 12px;
+        /* padding: 8px 12px; */
         width: 150px;
         height: 52px;
         text-align: center;
@@ -360,13 +364,294 @@
     }
 }
 
-@media only screen and (max-width: 856px) {
-    .frame-158{
-        width: 100%;
+@media only screen and (max-width: 846px) {
+    .nav {
+        width: 50%;
+      }
+      .banner{
+          padding: 8vh 4vh;
+      }
+
+    .docs-side-profile{
+        height: 82vh;
+        top: -70px;
+    }
+
+    .img-canvas{
+        height: 69vh;
+    }
+
+    .welcom-to-your {
+        color: var(--med-e-vote-blue-gray, #a4aec1);
+        font: 700 35px "Inter", sans-serif;
+      }
+      .mede-vote {
+        color: var(--med-e-vote-blue, #092eae);
+        font: 700 35px "Inter", sans-serif;
+      }
+      .home-register-btn{
+        /* padding: 8px 12px; */
+        width: 130px;
+        height: 45px;
+        text-align: center;
+        font: 500 24px "Inter", sans-serif;
+        position: relative;
+    }
+
+    .summary-text{
+        font-size: 35px;
+    }
+    .summer-inn-text{
+        font-size: 18px;
+    }
+
+    ._14{
+        font-size: 200px;
+        width: fit-content;
+    }
+
+    .days-more{
+        font-size: 44px;
+    }
+    .social-item{
+        height: 30px;
+        width: 30px;
+        font-size: 15px;
+        margin: 2px;
+    }
+    .logo-mdc2{
+        width: 50px;
+        height: 50px;
     }
 }
 
-@media only screen and (max-width: 512px) {
+@media only screen and (max-width: 748px) {
+    .nav {
+        width: 58%;
+      }
+    .docs-side-profile{
+        height: 64vh;
+        top: -70px;
+    }
+
+    .img-canvas{
+        height: 45vh;
+    }
+
+    .welcom-to-your {
+        color: var(--med-e-vote-blue-gray, #a4aec1);
+        font: 700 25px "Inter", sans-serif;
+      }
+      .mede-vote {
+        color: var(--med-e-vote-blue, #092eae);
+        font: 700 25px "Inter", sans-serif;
+      }
+      .home-register-btn{
+        /* padding: 8px 12px; */
+        width: 120px;
+        height: 35px;
+        text-align: center;
+        font: 500 20px "Inter", sans-serif;
+        position: relative;
+    }
+    #screenresponsive{
+        display: none;
+    }
+    .summary-text{
+        font-size: 28px;
+    }
+    .summer-inn-text{
+        font-size: 18px;
+    }
+
+    .frame-158{
+        padding: 37px 18px;
+    }
+    .body-2{
+        padding: 31px 15px;
+    }
+    .you-can-cast{
+        font-size: 18px;
+        margin: 0;
+    }
+    .social-item{
+        height: 30px;
+        width: 30px;
+        font-size: 15px;
+        margin: 2px;
+    }
+    .logo-mdc2{
+        width: 50px;
+        height: 50px;
+    }
+    .contact{
+        font-size: 18px;
+    }
+    .footer-inner{
+        padding: 15px 21px;
+    }
+}
+
+ @media only screen and (max-width: 636px) {
+    .logo-mdc{
+        height: 50px;
+        width: 50px;
+    }
+    .nav ul .nav-item{
+        padding: 2px 10px;
+    }
+    .profile-icon{
+        width: 46px;
+        height: 46px;
+    }
+    .nav {
+        width: 65%;
+      }
+
+    .docs-side-profile{
+        height: 48vh;
+        top: -53px;
+    }
+
+    .img-canvas{
+        height: 25vh;
+    }
+    .welcom-to-your {
+        color: var(--med-e-vote-blue-gray, #a4aec1);
+        font: 700 20px "Inter", sans-serif;
+        margin: 0;
+      }
+      .mede-vote {
+        color: var(--med-e-vote-blue, #092eae);
+        font: 700 20px "Inter", sans-serif;
+        margin: 0;
+      }
+
+      .you-can-cast{
+        font-size: 15px;
+        margin: 0;
+    }
+
+    .content-msg{
+        padding: 1.4rem;
+    }
+    .summary-text{
+        font-size: 18px;
+    }
+    .summer-inn-text{
+        font-size: 15px;
+    }
+
+    .frame-158{
+        padding: 27px 15px;
+    }
+    .body-2{
+        padding: 21px 10px;
+    }
+    .you-can-cast{
+        font-size: 15px;
+        margin: 0;
+    }
+
+    .social-item{
+        height: 24px;
+        width: 24px;
+        font-size: 15px;
+        margin: 3px;
+    }
+    .logo-mdc2{
+        width: 45px;
+        height: 45px;
+    }
+    .contact{
+        font-size: 13px;
+    }
+    .footer-inner{
+        padding: 0px 39px;
+    }
+    .mask-group i{
+        font-size: 55px;
+
+        height: 60px;
+        width: 60px;
+    }
+ }
+ @media only screen and (max-width: 464px) {
+    .logo-mdc{
+        height: 45px;
+        width: 45px;
+    }
+    .nav ul .nav-item{
+        padding: 2px 10px;
+        font-size: 13px;
+    }
+    .profile-icon{
+        width: 37px;
+        height: 37px;
+    }
+    .nav {
+        width: 70%;
+      }
+      .frame-158 i{
+        font-size: 10vw;
+      }
+
+    .docs-side-profile{
+        height: 40vh;
+        top: -43px;
+    }
+
+    .img-canvas{
+        height: 25vh;
+    }
+    .welcom-to-your {
+        color: var(--med-e-vote-blue-gray, #a4aec1);
+        font: 700 16px "Inter", sans-serif;
+        margin: 0;
+      }
+      .mede-vote {
+        color: var(--med-e-vote-blue, #092eae);
+        font: 700 16px "Inter", sans-serif;
+        margin: 0;
+      }
+
+      .you-can-cast{
+        font-size: 13px;
+        margin: 0;
+    }
+
+    .content-msg{
+        padding: 1.1rem;
+        height: 32vh;
+    }
+    .summary-text{
+        font-size: 15px;
+        margin-bottom: 6px;
+    }
+    .summer-inn-text{
+        font-size: 13px;
+    }
+
+    .frame-158{
+        padding: 15px 6px;
+    }
+    .body-2{
+        padding: 17px 6px;
+    }
+    .you-can-cast{
+        font-size: 13px;
+        margin: 0;
+    }
+    .home-register-btn{
+        padding: 5px 12px;
+        width: 80px;
+        height: 40px;
+        text-align: center;
+        font: 500 13px "Inter", sans-serif;
+        position: relative;
+    }
+}
+/* @media only screen and (max-width: 512px) {
     .nav {
         width: 70%;
     }
@@ -402,4 +687,4 @@
         width: 60px;
         height: 60px;
     }
-}
+} */
