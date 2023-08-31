@@ -32,24 +32,35 @@
 }
 .nav{
     margin-left: auto;
-    width: 35%;
+    width: 30%;
 }
 .nav ul{
     justify-content: space-around;
     align-items: baseline;
     list-style: none;
     width: 100%;
+    position: relative;
 }
+
 
 
 .nav ul .nav-item{
     background-color: white;
+    /* color: white; */
     border-radius: 50px;
     padding: 7px 20px;
     width: 100%;
-    background: var(--med-e-vote-gray, #DFE6F3);
+    /* background: var(--med-e-vote-gray, #DFE6F3); */
     text-decoration: none;
+    position: relative;
 }
+
+.nav ul .nav-item:hover{
+    background-color: var(--med-e-vote-bright-green);
+    color: white;
+    transition: .3s ease;
+}
+
 .logo-mdc {
   background: linear-gradient(to left, #ffffff, #ffffff);
   border-radius: 153px;
@@ -76,19 +87,22 @@
   overflow: hidden;
 }
 .profile-icon {
-  background: linear-gradient(to left, #ffffff, #ffffff);
-  border-radius: 62px;
-  flex-shrink: 0;
-  width: 55px;
-  height: 55px;
-  position: relative;
-  overflow: hidden;
+    background: linear-gradient(to left, #ffffff, #ffffff);
+    border-radius: 62px;
+    flex-shrink: 0;
+    width: 55px;
+    height: 55px;
+    box-shadow: -2px 1px 5px #0000003b;
+    outline: 2px solid var(--med-e-vote-blue);
+    outline-offset: 0px;
+    position: relative;
+    overflow: hidden;
   
 }
 .med-e-vote {
   color: var(--adm-brighter-yellow-green, #02ff2e);
   text-align: center;
-  font: 900 14vw "Inter", sans-serif;
+  font: 900 11vw "Inter", sans-serif;
   position: relative;
   align-self: stretch;
   display: flex;
@@ -102,7 +116,7 @@
 .home-register-btn{
     background: var(--med-e-vote-bright-green, #54e445);
     border-radius: 59px;
-    padding: 15px 22px 15px 22px;
+    padding: 15px 22px;
     width: 200px;
     height: 64px;
     outline: none;
@@ -112,9 +126,19 @@
     font: 500 34px/20px "Inter", sans-serif;
     position: relative;
 }
+.home-register-btn:hover{
+    box-shadow: 2px 3px 5px #0000004d;
+    outline: 4px solid var(--med-e-vote-bright-green);
+    outline-offset: 5px;
+    position: relative;
+    top: -4px;
+    left: 3px;
+    transition: all .3s ease-in;
+}
+
 .docs-side-profile{
     height: 120vh;
-    top: -150px;
+    top: -110px;
     position: absolute;
 }
 .welcome-to-your-med-e-vote {
@@ -125,17 +149,17 @@
 }
 .welcom-to-your {
   color: var(--med-e-vote-blue-gray, #a4aec1);
-  font: 700 80px "Inter", sans-serif;
+  font: 700 60px "Inter", sans-serif;
 }
 .mede-vote {
   color: var(--med-e-vote-blue, #092eae);
-  font: 700 80px "Inter", sans-serif;
+  font: 700 60px "Inter", sans-serif;
 }
 .you-can-cast {
   color: var(--med-e-vote-blue, #092eae);
   text-align: left;
-  width: 72vh;
-  font: 400 27px "Inter", sans-serif;
+  /* width: 72vh; */
+  font: 400 20px "Inter", sans-serif;
   position: relative;
   align-self: stretch;
 }
@@ -156,6 +180,16 @@
   flex-direction: column;
 }
 
+.frame-158:hover{
+    outline: 4px solid var(--med-e-vote-blue);
+    outline-offset: 10px;
+    position: relative;
+    top: -5px;
+    left: 5px;
+    background-color: var(--med-e-vote-dark-blue, #002197);
+    transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
 .summary-text {
   color: var(--med-e-vote-gray, #dfe6f3);
   text-align: center;
@@ -172,12 +206,12 @@
 
 .body-3 {
   background: var(--med-e-vote-blue, #092eae);
-  padding: 77px 0px 77px 0px;
+  padding: 40px 0px ;
 }
 
 
 .mask-group {
-  width: 144px;
+  width: fit-content;
   height: 144px;
   position: static;
 }
@@ -189,12 +223,36 @@
   position: relative;
   width: 655px;
 }
+.days-more::before {  
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+  
+  .days-more:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  .days-more::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    border-radius: 45px;
+    background: var(--med-e-vote-bright-green);
+    z-index: -1;
+    transition: transform .3s ease;
+  }
+
 .days-more {
   color: var(--adm-off-white-texts, #d6d6d6);
   text-align: center;
   font: 400 64px "Inter", sans-serif;
   position: relative;
-  width: 655px;
+  padding: 8px 17px;
+
+  width: fit-content;
 }
 
 .footer-inner {
@@ -239,8 +297,109 @@
     background-color: white;
     box-shadow: 2px 3px 15px #000000c9;
     /* margin-bottom: 10px; */
-    position: relative;
-    top: -4px;
+    transform: scale(1.1);
+    /* position: relative; */
+    /* top: -4px; */
     transition: all .3s ease-in;
 
+}
+
+.img-canvas{
+    height: 103vh;
+}
+.content-msg{
+    padding: 5rem;
+}
+
+@media only screen and (max-width: 684px) {
+    .nav {
+      width: 70%;
+    }
+    .banner{
+        padding: 10vh 5vh;
+    }
+    .logo-mdc{
+        width: 70px;
+        height: 70px;
+    }
+    .nav ul .nav-item{
+        padding: 5px 15px;
+    }
+    .docs-side-profile{
+        height: 78vh;
+        top:-72px;
+        left: 25%;
+    }
+    .img-canvas{
+        height: 61vh;
+    }
+    .content-msg{
+        padding: 2rem;
+    }
+    .welcom-to-your {
+        color: var(--med-e-vote-blue-gray, #a4aec1);
+        font: 700 45px "Inter", sans-serif;
+      }
+      .mede-vote {
+        color: var(--med-e-vote-blue, #092eae);
+        font: 700 45px "Inter", sans-serif;
+      }
+      .home-register-btn{
+        padding: 8px 12px;
+        width: 150px;
+        height: 52px;
+        text-align: center;
+        font: 500 24px/10px "Inter", sans-serif;
+        position: relative;
+    }
+    .summary-text{
+        font-size: 40px;
+    }
+    .summer-inn-text{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 856px) {
+    .frame-158{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 512px) {
+    .nav {
+        width: 70%;
+    }
+    .banner{
+        padding: 10vh 2vh;
+    }
+    .logo-mdc{
+        width: 50px;
+        height: 50px;
+    }
+    .nav ul .nav-item{
+        padding: 5px 15px;
+    }
+    .docs-side-profile{
+        height: 76vh;
+        left: 13%;
+        top:-72px;
+    }
+    .img-canvas{
+        height: 61vh;
+    }
+    .content-msg{
+        padding: 1.5rem;
+    }
+    
+    ._14{
+        font-size: 210px;
+    }
+    .days-more{
+        font-size: 45px;
+    }
+    .logo-mdc2{
+        width: 60px;
+        height: 60px;
+    }
 }
