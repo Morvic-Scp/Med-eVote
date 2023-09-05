@@ -345,7 +345,7 @@
     height: 30.3rem;
 }
 .content-msg{
-    padding: 4.3rem;
+    /* padding: 4.3rem; */
 }
 
 .mask-group i{
@@ -361,12 +361,12 @@
 }
 @media only screen and (max-width: 1865px) {
     .docs-side-profile{
-        height: 50.4rem;
+        height: 44.4rem;
         top:-84px;
         /* left: 25%; */
     }
     .img-canvas{
-        height: 45.1rem;
+        height: 39.1rem;
     }
 }
 
@@ -385,15 +385,15 @@
         padding: 5px 15px;
     }
     .docs-side-profile{
-        height: 30rem;
+        height: 35rem;
         top:-64px;
         /* left: 25%; */
     }
     .img-canvas{
-        height: 26rem;
+        height: 31rem;
     }
     .content-msg{
-        padding: 2rem;
+        /* padding: 2rem; */
     }
     .welcom-to-your {
         color: var(--med-e-vote-blue-gray, #a4aec1);
@@ -419,6 +419,17 @@
     }
 }
 
+@media only screen and (max-width: 1010px) {
+    .docs-side-profile{
+        height: 30rem;
+        top:-84px;
+        /* left: 25%; */
+    }
+    .img-canvas{
+        height: 24.8rem;
+    }
+}
+
 @media only screen and (max-width: 846px) {
     .nav {
         width: 50%;
@@ -433,7 +444,7 @@
     }
 
     .img-canvas{
-        height: 20rem;
+        height: 21.5rem;
     }
 
     .welcom-to-your {
@@ -569,7 +580,7 @@
     }
 
     .img-canvas{
-        height: 25vh;
+        height: 12rem;
     }
     .welcom-to-your {
         color: var(--med-e-vote-blue-gray, #a4aec1);
@@ -588,7 +599,7 @@
     }
 
     .content-msg{
-        padding: 1.4rem;
+        /* padding: 1.4rem; */
     }
     .summary-text{
         font-size: 18px;
@@ -661,12 +672,12 @@
     }
     .welcom-to-your {
         color: var(--med-e-vote-blue-gray, #a4aec1);
-        font: 700 16px "Inter", sans-serif;
+        font: 700 14px "Inter", sans-serif;
         margin: 0;
       }
       .mede-vote {
         color: var(--med-e-vote-blue, #092eae);
-        font: 700 16px "Inter", sans-serif;
+        font: 700 14px "Inter", sans-serif;
         margin: 0;
       }
 
@@ -676,11 +687,11 @@
     }
 
     .content-msg{
-        padding: 1.1rem;
-        height: fit-content;
+        /* padding: 1.1rem; */
+        /* height: fit-content; */
     }
     .summary-text{
-        font-size: 15px;
+        font-size: 14px;
         margin-bottom: 6px;
     }
     .summer-inn-text{
@@ -724,7 +735,7 @@
         height: 76vh;
         left: 13%;
         top:-72px;
-    }
+    }   
     .img-canvas{
         height: 61vh;
     }
